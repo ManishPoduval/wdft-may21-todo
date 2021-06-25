@@ -1,0 +1,21 @@
+<h3>Title {{todo.title}}</h3>
+
+<h4>Desc {{todo.description}}</h4>
+
+{{!-- The todo._id will be a dynamic id to a single todo --}}
+<form action="/todo/{{todo._id}}/delete" method="POST">
+  <button class="btn btn-danger">Delete</button>
+</form>
+
+
+{{!-- Two different ways to make GET requests --}}
+
+{{!-- The todo._id will be a dynamic id to a single todo --}}
+<form action="/todo/{{todo._id}}/edit" method="GET">
+  <button type="submit" class="btn btn-warning">Edit</button>
+</form>
+
+{{!-- 
+<a href="/todo/{{todo._id}}/edit" >
+     <button type="submit" class="btn btn-warning">Edit</button>
+</a> --}}

@@ -1,0 +1,9 @@
+<h2>My todos are here</h2>
+
+{{#each todos}}
+
+  <a href="/todo/{{ this._id }}" >
+     <p>{{this.title}}</p>
+  </a>
+ 
+{{/each}}

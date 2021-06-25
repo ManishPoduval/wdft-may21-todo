@@ -1,0 +1,21 @@
+{{!-- The method and action need to match the route in our server. See todo.routes.js (U)pdate Routes --}}
+
+<form method="POST" action="/todo/{{ todo._id }}/edit">
+  <div class="mb-3">
+    <label class="form-label" >Title</label>
+
+    {{!-- we can add information received as values of the input tags. They will appear to the user with the current information of the ToDo --}}
+    {{!-- IMPORTANT: always wrap the {{}} around quotes when setting attribute values. '{{todo.title}}' Else your data will be eaten up. Check it out.--}}
+
+    <input class="form-control" type="text" name="title" value="{{todo.title}}">
+    <br>
+    <label class="form-label" >Description</label>
+
+    {{!-- IMPORTANT: always wrap the {{}} around quotes when setting attribute values. '{{todo.description , Else your data will be eaten up. Check it out.}}' --}}
+    <input class="form-control" type="text" name="description" value="{{todo.description}}">
+    <br>
+
+    {{!-- when we click the button, the input values will be transmitted through the body of the request --}}
+    <button class="btn btn-primary" type="submit">SUBMIT</button>
+  </div>
+</form>
